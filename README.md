@@ -16,7 +16,7 @@ An example command line:
 
 Example 1:
 
-![megan](examples/megan/megan.jpg |width=250)
+![megan](examples/megan/megan.jpg | width=250)
 
 ![spring](examples/megan/spring.jpg)
 
