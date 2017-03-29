@@ -16,9 +16,9 @@ An example command line:
 
 Example 1:
 
-![megan](examples/megan/megan.jpg | width=250)
+![megan](examples/megan/megan.jpg)
 
-![spring](examples/megan/spring.jpg)
+<img src="https://github.com/askerlee/neural-style/raw/master/examples/megan/spring.jpg" width=250>
 
 The original method produces such an image:
 
