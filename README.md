@@ -16,34 +16,34 @@ An example command line:
 
 Example 1:
 
-![megan](examples/megan/megan.jpg)
+<img src="https://github.com/askerlee/neural-style/raw/master/examples/megan/megan.jpg" width=500>
 
-<img src="https://github.com/askerlee/neural-style/raw/master/examples/megan/spring.jpg" width=250>
+<img src="https://github.com/askerlee/neural-style/raw/master/examples/megan/spring.jpg" width=500>
 
 The original method produces such an image:
 
-![megan_spring500](examples/megan/megan_spring500.jpg)
+<img src="https://github.com/askerlee/neural-style/raw/master/examples/megan/megan_spring500.jpg" width=500>
 
 A lot of unpleasing artifacts are visible, e.g. there is a big blob on Megan's face.
 
 With the Laplacian loss constraint, the produced image becomes:
 
-![megan_spring510](examples/megan/megan_spring510.jpg)
+<img src="https://github.com/askerlee/neural-style/raw/master/examples/megan/megan_spring510.jpg" width=500>
 
 Example 2:
 
 The style image is from Prisma.
 
-![xiuchao](examples/xiuchao/xiuchao.jpg)
+<img src="https://github.com/askerlee/neural-style/raw/master/examples/xiuchao/xiuchao.jpg" width=500>
 
-![comic](examples/xiuchao/comic.jpg)
+<img src="https://github.com/askerlee/neural-style/raw/master/examples/xiuchao/comic.jpg" width=500>
 
 The original method produces:
 
-![xiuchao_comic500](examples/xiuchao/xiuchao_comic500.jpg)
+<img src="https://github.com/askerlee/neural-style/raw/master/examples/xiuchao/xiuchao_comic500.jpg" width=500>
 
 Again, the image, especially the face, is fragmented.
 
 With the Laplacian loss constraint, the produced image becomes much more smooth, although less "stylish":
 
-![xiuchao_comic510](examples/xiuchao/xiuchao_comic510.jpg)
+<img src="https://github.com/askerlee/neural-style/raw/master/examples/xiuchao/xiuchao_comic510.jpg" width=500>
