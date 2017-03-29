@@ -16,7 +16,7 @@ An example command line:
 
 Example 1:
 
-![megan](examples/megan/megan.jpg)
+![megan](examples/megan/megan.jpg =250x)
 
 ![spring](examples/megan/spring.jpg)
 
@@ -40,10 +40,10 @@ The style image is from Prisma.
 
 The original method produces:
 
-![xiuchao_comic500](examples/megan/xiuchao_comic500.jpg)
+![xiuchao_comic500](examples/xiuchao/xiuchao_comic500.jpg)
 
 Again, the image, especially the face, is fragmented.
 
 With the Laplacian loss constraint, the produced image becomes much more smooth, although less "stylish":
 
-![xiuchao_comic510](examples/megan/xiuchao_comic510.jpg)
+![xiuchao_comic510](examples/xiuchao/xiuchao_comic510.jpg)
