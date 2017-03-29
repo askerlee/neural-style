@@ -16,34 +16,34 @@ An example command line:
 
 Example 1:
 
-![megan] (examples/megan/megan.jpg)
+![megan](examples/megan/megan.jpg)
 
-![spring] (examples/megan/spring.jpg)
+![spring](examples/megan/spring.jpg)
 
 The original method produces such an image:
 
-![megan_spring500] (examples/megan/megan_spring500.jpg)
+![megan_spring500](examples/megan/megan_spring500.jpg)
 
-A lot of unpleasing artifacts are visible, especially on Megan's face.
+A lot of unpleasing artifacts are visible, e.g. there is a big blob on Megan's face.
 
 With the Laplacian loss constraint, the produced image becomes:
 
-[megan_spring510] (examples/megan/megan_spring510.jpg)
+[megan_spring510](examples/megan/megan_spring510.jpg)
 
 Example 2:
 
 The style image is from Prisma.
 
-![xiuchao] (examples/xiuchao/xiuchao.jpg)
+![xiuchao](examples/xiuchao/xiuchao.jpg)
 
-![comic] (examples/xiuchao/comic.jpg)
+![comic](examples/xiuchao/comic.jpg)
 
 The original method produces:
 
-![xiuchao_comic500] (examples/megan/xiuchao_comic500.jpg)
+![xiuchao_comic500](examples/megan/xiuchao_comic500.jpg)
 
 Again, the image, especially the face, is fragmented.
 
 With the Laplacian loss constraint, the produced image becomes much more smooth, although less "stylish":
 
-![xiuchao_comic510] (examples/megan/xiuchao_comic510.jpg)
+![xiuchao_comic510](examples/megan/xiuchao_comic510.jpg)
