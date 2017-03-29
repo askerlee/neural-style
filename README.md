@@ -4,5 +4,10 @@ An image Laplacian loss is imposed to the original neural style transfer method,
 
 Check [https://github.com/anishathalye/neural-style] for original documentation.
 
-Extra command line argument:
-![--content-lapweight 100]
+The only extra command line argument:
+
+`--content-lapweight` (default: 100)
+
+An example command line:
+
+`python neural_style.py --content megan.jpg --styles spring.jpg --output megan_spring.jpg --content-weight 50`
