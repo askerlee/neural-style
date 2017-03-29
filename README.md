@@ -28,7 +28,7 @@ A lot of unpleasing artifacts are visible, e.g. there is a big blob on Megan's f
 
 With the Laplacian loss constraint, the produced image becomes:
 
-[megan_spring510](examples/megan/megan_spring510.jpg)
+![megan_spring510](examples/megan/megan_spring510.jpg)
 
 Example 2:
 
