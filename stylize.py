@@ -9,7 +9,7 @@ from sys import stderr
 
 from PIL import Image
 
-CONTENT_LAYERS = ('relu4_2', 'relu5_2')
+CONTENT_LAYERS = ('relu4_2', 'relu5_2', 'lap1')
 STYLE_LAYERS = ('relu1_1', 'relu2_1', 'relu3_1', 'relu4_1', 'relu5_1')
 
 try:
@@ -19,7 +19,8 @@ except NameError:
 
 
 def stylize(network, initial, initial_noiseblend, content, styles, preserve_colors, iterations,
-        content_weight, content_weight_blend, style_weight, style_layer_weight_exp, style_blend_weights, tv_weight,
+        content_weight, content_weight_blend, content_lapweight, 
+        style_weight, style_layer_weight_exp, style_blend_weights, tv_weight,
         learning_rate, beta1, beta2, epsilon, pooling,
         print_iterations=None, checkpoint_iterations=None):
     """
@@ -92,7 +93,8 @@ def stylize(network, initial, initial_noiseblend, content, styles, preserve_colo
         content_layers_weights = {}
         content_layers_weights['relu4_2'] = content_weight_blend
         content_layers_weights['relu5_2'] = 1.0 - content_weight_blend
-
+        content_layers_weights['lap1'] = content_lapweight
+        
         content_loss = 0
         content_losses = []
         for content_layer in CONTENT_LAYERS:

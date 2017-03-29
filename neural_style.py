@@ -14,6 +14,7 @@ from PIL import Image
 
 # default arguments
 CONTENT_WEIGHT = 5e0
+CONTENT_LAPWEIGHT = 1e2
 CONTENT_WEIGHT_BLEND = 1
 STYLE_WEIGHT = 5e2
 TV_WEIGHT = 1e2
@@ -67,6 +68,9 @@ def build_parser():
     parser.add_argument('--content-weight', type=float,
             dest='content_weight', help='content weight (default %(default)s)',
             metavar='CONTENT_WEIGHT', default=CONTENT_WEIGHT)
+    parser.add_argument('--content-lapweight', type=float,
+            dest='content_lapweight', help='Laplacian content weight (default %(default)s)',
+            metavar='CONTENT_LAPWEIGHT', default=CONTENT_LAPWEIGHT)
     parser.add_argument('--style-weight', type=float,
             dest='style_weight', help='style weight (default %(default)s)',
             metavar='STYLE_WEIGHT', default=STYLE_WEIGHT)
@@ -164,6 +168,7 @@ def main():
         iterations=options.iterations,
         content_weight=options.content_weight,
         content_weight_blend=options.content_weight_blend,
+        content_lapweight=options.content_lapweight,
         style_weight=options.style_weight,
         style_layer_weight_exp=options.style_layer_weight_exp,
         style_blend_weights=style_blend_weights,

@@ -16,8 +16,9 @@ VGG19_LAYERS = (
     'relu4_3', 'conv4_4', 'relu4_4', 'pool4',
 
     'conv5_1', 'relu5_1', 'conv5_2', 'relu5_2', 'conv5_3',
-    'relu5_3', 'conv5_4', 'relu5_4'
+    'relu5_3', 'conv5_4', 'relu5_4'    
 )
+LAPLACIAN_LAYERS = ( 'pool_lap', 'lap1' )
 
 def load_net(data_path):
     data = scipy.io.loadmat(data_path)
@@ -44,7 +45,14 @@ def net_preloaded(weights, input_image, pooling):
             current = _pool_layer(current, pooling)
         net[name] = current
 
-    assert len(net) == len(VGG19_LAYERS)
+    net['pool_lap'] = _pool_layer(input_image, 'avg')
+    laplacian = np.array( [ [0,-1,0], [-1,4,-1], [0,-1,0] ], dtype=np.float32 )
+    lapW = np.zeros( (3, 3, 3, 1), dtype=np.float32 )
+    for t in range(3):
+        lapW[:,:,t,0] = laplacian
+    
+    net['lap1'] = _conv_layer(net['pool_lap'], lapW, [0.0])
+    assert len(net) == len(VGG19_LAYERS) + len(LAPLACIAN_LAYERS)
     return net
 
 def _conv_layer(input, weights, bias):
